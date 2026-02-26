@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="src/output.css" rel="stylesheet" />
+  <style>
+    /* 1. Hide every form box by default */
+    .user-form-container {
+      display: none;
+    }
+
+    /* 2. When the URL matches the ID (e.g. edit.html#user1), show that box */
+    .user-form-container:target {
+      display: block;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-6">
+
+  <div id="user1" class="user-form-container w-full max-w-md bg-white p-8 rounded-xl shadow-lg  ">
+    <h2 class="text-2xl font-bold mb-6 text-gray-800">Edit User: Piyush</h2>
+    <div class="space-y-4">
+      <div>
+        <label class="block text-sm font-semibold text-gray-600">Full Name</label>
+        <input type="text" value="Piyush" class="w-full mt-1 p-2 border rounded-md bg-gray-50 outline-none focus:ring-2 focus:ring-blue-400">
+      </div>
+      <div>
+        <label class="block text-sm font-semibold text-gray-600">Email Address</label>
+        <input type="email" value="piyush@gmail.com" class="w-full mt-1 p-2 border rounded-md bg-gray-50 outline-none focus:ring-2 focus:ring-blue-400">
+      </div>
+      <div class="flex items-center justify-between pt-4">
+        <a href="User.html" class="text-gray-500 hover:text-gray-700 text-sm underline">Back to Users</a>
+        <button class="bg-green-600 text-white px-6 py-2 rounded-md font-bold shadow-md hover:bg-green-700">Save Changes</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="user2" class="user-form-container w-full max-w-md bg-white p-8 rounded-xl shadow-lg ">
+    <h2 class="text-2xl font-bold mb-6 text-gray-800">Edit User: Rahul</h2>
+    <div class="space-y-4">
+      <div>
+        <label class="block text-sm font-semibold text-gray-600">Full Name</label>
+        <input type="text" value="Rahul" class="w-full mt-1 p-2 border rounded-md bg-gray-50 outline-none focus:ring-2  focus:ring-blue-400">
+      </div>
+      <div>
+        <label class="block text-sm font-semibold text-gray-600">Email Address</label>
+        <input type="email" value="rahul@gmail.com" class="w-full mt-1 p-2 border rounded-md bg-gray-50 outline-none focus:ring-2 focus:ring-blue-400">
+      </div>
+      <div class="flex items-center justify-between pt-4">
+        <a href="User.html" class="text-gray-500 hover:text-gray-700 text-sm underline">Back to Users</a>
+        <button class="bg-green-600 text-white px-6 py-2 rounded-md font-bold shadow-md hover:bg-green-700">Save Changes</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="user3" class="user-form-container w-full max-w-md bg-white p-8 rounded-xl shadow-lg ">
+    <h2 class="text-2xl font-bold mb-6 text-gray-800">Edit User: Parth</h2>
+    <div class="space-y-4">
+      <div>
+        <label class="block text-sm font-semibold text-gray-600">Full Name</label>
+        <input type="text" value="Parth" class="w-full mt-1 p-2 border rounded-md bg-gray-50 outline-none focus:ring-2 focus:ring-blue-400">
+      </div>
+      <div>
+        <label class="block text-sm font-semibold text-gray-600">Email Address</label>
+        <input type="email" value="parth@gmail.com" class="w-full mt-1 p-2 border rounded-md bg-gray-50 outline-none focus:ring-2 focus:ring-blue-400">
+      </div>
+      <div class="flex items-center justify-between pt-4">
+        <a href="User.html" class="text-gray-500 hover:text-gray-700 text-sm underline">Back to Users</a>
+        <button class="bg-green-600 text-white px-6 py-2 rounded-md font-bold shadow-md hover:bg-green-700">Save Changes</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="user4" class="user-form-container w-full max-w-md bg-white p-8 rounded-xl shadow-lg ">
+    <h2 class="text-2xl font-bold mb-6 text-gray-800">Edit User: Sneha</h2>
+    <div class="space-y-4">
+      <div>
+        <label class="block text-sm font-semibold text-gray-600">Full Name</label>
+        <input type="text" value="Sneha" class="w-full mt-1 p-2 border rounded-md bg-gray-50 outline-none focus:ring-2  focus:ring-blue-400">
+      </div>
+      <div>
+        <label class="block text-sm font-semibold text-gray-600">Email Address</label>
+        <input type="email" value="sneha@gmail.com" class="w-full mt-1 p-2 border rounded-md bg-gray-50 outline-none focus:ring-2 focus:ring-blue-400">
+      </div>
+      <div class="flex items-center justify-between pt-4">
+        <a href="User.html" class="text-gray-500 hover:text-gray-700 text-sm underline">Back to Users</a>
+        <button class="bg-green-600 text-white px-6 py-2 rounded-md font-bold shadow-md hover:bg-green-700">Save Changes</button>
+      </div>
+    </div>
+  </div>
+<div id="user5" class="user-form-container w-full max-w-md bg-white p-8 rounded-xl shadow-lg ">
+    <h2 class="text-2xl font-bold mb-6 text-gray-800">Edit User: Yash</h2>
+    <div class="space-y-4">
+      <div>
+        <label class="block text-sm font-semibold text-gray-600">Full Name</label>
+        <input type="text" value="Yash" class="w-full mt-1 p-2 border rounded-md bg-gray-50 outline-none focus:ring-2  focus:ring-blue-400">
+      </div>
+      <div>
+        <label class="block text-sm font-semibold text-gray-600">Email Address</label>
+        <input type="email" value="yash@gmail.com" class="w-full mt-1 p-2 border rounded-md bg-gray-50 outline-none focus:ring-2 focus:ring-blue-400">
+      </div>
+      <div class="flex items-center justify-between pt-4">
+        <a href="User.html" class="text-gray-500 hover:text-gray-700 text-sm underline">Back to Users</a>
+        <button class="bg-green-600 text-white px-6 py-2 rounded-md font-bold shadow-md hover:bg-green-700">Save Changes</button>
+      </div>
+    </div>
+  </div>
+  <div id="user6" class="user-form-container w-full max-w-md bg-white p-8 rounded-xl shadow-lg ">
+    <h2 class="text-2xl font-bold mb-6 text-gray-800">Edit User: Aarav</h2>
+    <div class="space-y-4">
+      <div>
+        <label class="block text-sm font-semibold text-gray-600">Full Name</label>
+        <input type="text" value="Aarav" class="w-full mt-1 p-2 border rounded-md bg-gray-50 outline-none focus:ring-2 focus:ring-blue-400">
+      </div>
+      <div>
+        <label class="block text-sm font-semibold text-gray-600">Email Address</label>
+        <input type="email" value="aarav@gmail.com" class="w-full mt-1 p-2 border rounded-md bg-gray-50 outline-none focus:ring-2 focus:ring-blue-400">
+      </div>
+      <div class="flex items-center justify-between pt-4">
+        <a href="User.html" class="text-gray-500 hover:text-gray-700 text-sm underline">Back to Users</a>
+         <button class="bg-green-600 text-white px-6 py-2 rounded-md font-bold shadow-md hover:bg-green-700">Save Changes</button>
+      </div>
+    </div>
+  </div>
+    <div id="user7" class="user-form-container w-full max-w-md bg-white p-8 rounded-xl shadow-lg">
+    <h2 class="text-2xl font-bold mb-6 text-gray-800">Edit User: Meera</h2>
+    <div class="space-y-4">
+      <div>
+        <label class="block text-sm font-semibold text-gray-600">Full Name</label>
+        <input type="text" value="Meera" class="w-full mt-1 p-2 border rounded-md bg-gray-50 outline-none focus:ring-2  focus:ring-blue-400">
+      </div>
+      <div>
+        <label class="block text-sm font-semibold text-gray-600">Email Address</label>
+        <input type="email" value="meera@gmail.com" class="w-full mt-1 p-2 border rounded-md bg-gray-50 outline-none focus:ring-2 focus:ring-blue-400">
+      </div>
+      <div class="flex items-center justify-between pt-4">
+        <a href="User.html" class="text-gray-500 hover:text-gray-700 text-sm underline">Back to Users</a>
+       <button class="bg-green-600 text-white px-6 py-2 rounded-md font-bold shadow-md hover:bg-green-700">Save Changes</button>
+      </div>
+    </div>
+  </div>
+  <div id="user8" class="user-form-container w-full max-w-md bg-white p-8 rounded-xl shadow-lg ">
+    <h2 class="text-2xl font-bold mb-6 text-gray-800">Edit User: Rohan</h2>
+    <div class="space-y-4">
+      <div>
+        <label class="block text-sm font-semibold text-gray-600">Full Name</label>
+        <input type="text" value="Rohan" class="w-full mt-1 p-2 border rounded-md bg-gray-50 outline-none focus:ring-2  focus:ring-blue-400">
+      </div>
+      <div>
+        <label class="block text-sm font-semibold text-gray-600">Email Address</label>
+        <input type="email" value="rohan@gmail.com" class="w-full mt-1 p-2 border rounded-md bg-gray-50 outline-none focus:ring-2 focus:ring-blue-400">
+      </div>
+      <div class="flex items-center justify-between pt-4">
+        <a href="User.html" class="text-gray-500 hover:text-gray-700 text-sm underline">Back to Users</a>
+       <button class="bg-green-600 text-white px-6 py-2 rounded-md font-bold shadow-md hover:bg-green-700">Save Changes</button>
+      </div>
+    </div>
+  </div>
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------- -->
+<!-- Order-1------> 
+  <div id="order01" class="user-form-container w-full max-w-md bg-white p-8 rounded-xl shadow-lg">
+    <h2 class="text-2xl font-bold mb-6 text-gray-800">Edit Order: Piyush Sharma	</h2>
+    <div class="space-y-4">
+      <div>
+        <label class="block text-sm font-semibold text-gray-600">Full Name</label>
+        <input type="text" value="Piyush Sharma" class="w-full mt-1 p-2 border rounded-md bg-gray-50 outline-none focus:ring-2  focus:ring-blue-400">
+      </div>
+      <div>
+        <label class="block text-sm font-semibold text-gray-600">Order ID</label>
+        <input type="text" value="#0245" class="w-full mt-1 p-2 border rounded-md bg-gray-50 outline-none focus:ring-2  focus:ring-blue-400">
+      </div>
+       <div>
+        <label class="block text-sm font-semibold text-gray-600">Total Amount</label>
+        <input type="text" value="₹13,500" class="w-full mt-1 p-2 border rounded-md bg-gray-50 outline-none focus:ring-2  focus:ring-blue-400">
+      </div>
+       <div>
+        <label class="block text-sm font-semibold text-gray-600">Order Status</label>
+        <input type="text" value="Completed" class="w-full mt-1 p-2 border rounded-md bg-gray-50 outline-none focus:ring-2  focus:ring-blue-400">
+      </div>
+      
+      <div class="flex items-center justify-between pt-4">
+        <a href="order.html" class="text-gray-500 hover:text-gray-700 text-sm underline">Back to Orders</a>
+       <button class="bg-green-600 text-white px-6 py-2 rounded-md font-bold shadow-md hover:bg-green-700">Save Changes</button>
+      </div>
+    </div>
+  </div>
+<!-- Order-2------> 
+  <div id="order02" class="user-form-container w-full max-w-md bg-white p-8 rounded-xl shadow-lg">
+    <h2 class="text-2xl font-bold mb-6 text-gray-800">Edit Order: Het pandit	</h2>
+    <div class="space-y-4">
+      <div>
+        <label class="block text-sm font-semibold text-gray-600">Full Name</label>
+        <input type="text" value="Het pandit" class="w-full mt-1 p-2 border rounded-md bg-gray-50 outline-none focus:ring-2  focus:ring-blue-400">
+      </div>
+      <div>
+        <label class="block text-sm font-semibold text-gray-600">Order ID</label>
+        <input type="text" value="#1342" class="w-full mt-1 p-2 border rounded-md bg-gray-50 outline-none focus:ring-2  focus:ring-blue-400">
+      </div>
+       <div>
+        <label class="block text-sm font-semibold text-gray-600">Total Amount</label>
+        <input type="text" value="₹11,000" class="w-full mt-1 p-2 border rounded-md bg-gray-50 outline-none focus:ring-2  focus:ring-blue-400">
+      </div>
+       <div>
+        <label class="block text-sm font-semibold text-gray-600">Order Status</label>
+        <input type="text" value="Pending" class="w-full mt-1 p-2 border rounded-md bg-gray-50 outline-none focus:ring-2  focus:ring-blue-400">
+      </div>
+      
+      <div class="flex items-center justify-between pt-4">
+        <a href="order.html" class="text-gray-500 hover:text-gray-700 text-sm underline">Back to Orders</a>
+       <button class="bg-green-600 text-white px-6 py-2 rounded-md font-bold shadow-md hover:bg-green-700">Save Changes</button>
+      </div>
+    </div>
+  </div>
+  <!-- Order-3------> 
+  <div id="order03" class="user-form-container w-full max-w-md bg-white p-8 rounded-xl shadow-lg">
+    <h2 class="text-2xl font-bold mb-6 text-gray-800">Edit Order: Neel Gohil	</h2>
+    <div class="space-y-4">
+      <div>
+        <label class="block text-sm font-semibold text-gray-600">Full Name</label>
+        <input type="text" value="Neel Gohil" class="w-full mt-1 p-2 border rounded-md bg-gray-50 outline-none focus:ring-2  focus:ring-blue-400">
+      </div>
+      <div>
+        <label class="block text-sm font-semibold text-gray-600">Order ID</label>
+        <input type="text" value="#1567" class="w-full mt-1 p-2 border rounded-md bg-gray-50 outline-none focus:ring-2  focus:ring-blue-400">
+      </div>
+       <div>
+        <label class="block text-sm font-semibold text-gray-600">Total Amount</label>
+        <input type="text" value="₹18,000" class="w-full mt-1 p-2 border rounded-md bg-gray-50 outline-none focus:ring-2  focus:ring-blue-400">
+      </div>
+       <div>
+        <label class="block text-sm font-semibold text-gray-600">Order Status</label>
+        <input type="text" value="InCompleted" class="w-full mt-1 p-2 border rounded-md bg-gray-50 outline-none focus:ring-2  focus:ring-blue-400">
+      </div>
+      
+      <div class="flex items-center justify-between pt-4">
+        <a href="order.html" class="text-gray-500 hover:text-gray-700 text-sm underline">Back to Orders</a>
+       <button class="bg-green-600 text-white px-6 py-2 rounded-md font-bold shadow-md hover:bg-green-700">Save Changes</button>
+      </div>
+    </div>
+  </div>
+  <!-- Order-4------> 
+   <div id="order04" class="user-form-container w-full max-w-md bg-white p-8 rounded-xl shadow-lg">
+    <h2 class="text-2xl font-bold mb-6 text-gray-800">Edit Order: Shlock roy	</h2>
+    <div class="space-y-4">
+      <div>
+        <label class="block text-sm font-semibold text-gray-600">Full Name</label>
+        <input type="text" value="Shlock roy" class="w-full mt-1 p-2 border rounded-md bg-gray-50 outline-none focus:ring-2  focus:ring-blue-400">
+      </div>
+      <div>
+        <label class="block text-sm font-semibold text-gray-600">Order ID</label>
+        <input type="text" value="#1866" class="w-full mt-1 p-2 border rounded-md bg-gray-50 outline-none focus:ring-2  focus:ring-blue-400">
+      </div>
+       <div>
+        <label class="block text-sm font-semibold text-gray-600">Total Amount</label>
+        <input type="text" value="₹16,900" class="w-full mt-1 p-2 border rounded-md bg-gray-50 outline-none focus:ring-2  focus:ring-blue-400">
+      </div>
+       <div>
+        <label class="block text-sm font-semibold text-gray-600">Order Status</label>
+        <input type="text" value="Completed" class="w-full mt-1 p-2 border rounded-md bg-gray-50 outline-none focus:ring-2  focus:ring-blue-400">
+      </div>
+      
+      <div class="flex items-center justify-between pt-4">
+        <a href="order.html" class="text-gray-500 hover:text-gray-700 text-sm underline">Back to Orders</a>
+       <button class="bg-green-600 text-white px-6 py-2 rounded-md font-bold shadow-md hover:bg-green-700">Save Changes</button>
+      </div>
+    </div>
+  </div>
+
+   <!-- Order-5------> 
+   <div id="order05" class="user-form-container w-full max-w-md bg-white p-8 rounded-xl shadow-lg">
+    <h2 class="text-2xl font-bold mb-6 text-gray-800">Edit Order: Niraj Mahinedra	</h2>
+    <div class="space-y-4">
+      <div>
+        <label class="block text-sm font-semibold text-gray-600">Full Name</label>
+        <input type="text" value="Niraj Mahinedra" class="w-full mt-1 p-2 border rounded-md bg-gray-50 outline-none focus:ring-2  focus:ring-blue-400">
+      </div>
+      <div>
+        <label class="block text-sm font-semibold text-gray-600">Order ID</label>
+        <input type="text" value="#1245" class="w-full mt-1 p-2 border rounded-md bg-gray-50 outline-none focus:ring-2  focus:ring-blue-400">
+      </div>
+       <div>
+        <label class="block text-sm font-semibold text-gray-600">Total Amount</label>
+        <input type="text" value="₹19,500" class="w-full mt-1 p-2 border rounded-md bg-gray-50 outline-none focus:ring-2  focus:ring-blue-400">
+      </div>
+       <div>
+        <label class="block text-sm font-semibold text-gray-600">Order Status</label>
+        <input type="text" value="Pending" class="w-full mt-1 p-2 border rounded-md bg-gray-50 outline-none focus:ring-2  focus:ring-blue-400">
+      </div>
+      
+      <div class="flex items-center justify-between pt-4">
+        <a href="order.html" class="text-gray-500 hover:text-gray-700 text-sm underline">Back to Orders</a>
+       <button class="bg-green-600 text-white px-6 py-2 rounded-md font-bold shadow-md hover:bg-green-700">Save Changes</button>
+      </div>
+    </div>
+  </div>
+  <!-- Order-6------> 
+   <div id="order06" class="user-form-container w-full max-w-md bg-white p-8 rounded-xl shadow-lg">
+    <h2 class="text-2xl font-bold mb-6 text-gray-800">Edit Order: Karthik Aryan	</h2>
+    <div class="space-y-4">
+      <div>
+        <label class="block text-sm font-semibold text-gray-600">Full Name</label>
+        <input type="text" value="Karthik Aryan" class="w-full mt-1 p-2 border rounded-md bg-gray-50 outline-none focus:ring-2  focus:ring-blue-400">
+      </div>
+      <div>
+        <label class="block text-sm font-semibold text-gray-600">Order ID</label>
+        <input type="text" value="#1897" class="w-full mt-1 p-2 border rounded-md bg-gray-50 outline-none focus:ring-2  focus:ring-blue-400">
+      </div>
+       <div>
+        <label class="block text-sm font-semibold text-gray-600">Total Amount</label>
+        <input type="text" value="₹20,500" class="w-full mt-1 p-2 border rounded-md bg-gray-50 outline-none focus:ring-2  focus:ring-blue-400">
+      </div>
+       <div>
+        <label class="block text-sm font-semibold text-gray-600">Order Status</label>
+        <input type="text" value="Completed" class="w-full mt-1 p-2 border rounded-md bg-gray-50 outline-none focus:ring-2  focus:ring-blue-400">
+      </div>
+      
+      <div class="flex items-center justify-between pt-4">
+        <a href="order.html" class="text-gray-500 hover:text-gray-700 text-sm underline">Back to Orders</a>
+       <button class="bg-green-600 text-white px-6 py-2 rounded-md font-bold shadow-md hover:bg-green-700">Save Changes</button>
+      </div>
+    </div>
+  </div>
+  <!-- Order-7------> 
+
+   <div id="order07" class="user-form-container w-full max-w-md bg-white p-8 rounded-xl shadow-lg">
+    <h2 class="text-2xl font-bold mb-6 text-gray-800">Edit Order: Karthik Aryan	</h2>
+    <div class="space-y-4">
+      <div>
+        <label class="block text-sm font-semibold text-gray-600">Full Name</label>
+        <input type="text" value="Karthik Sharma" class="w-full mt-1 p-2 border rounded-md bg-gray-50 outline-none focus:ring-2  focus:ring-blue-400">
+      </div>
+      <div>
+        <label class="block text-sm font-semibold text-gray-600">Order ID</label>
+        <input type="text" value="#1867" class="w-full mt-1 p-2 border rounded-md bg-gray-50 outline-none focus:ring-2  focus:ring-blue-400">
+      </div>
+       <div>
+        <label class="block text-sm font-semibold text-gray-600">Total Amount</label>
+        <input type="text" value="₹73,500" class="w-full mt-1 p-2 border rounded-md bg-gray-50 outline-none focus:ring-2  focus:ring-blue-400">
+      </div>
+       <div>
+        <label class="block text-sm font-semibold text-gray-600">Order Status</label>
+        <input type="text" value="Completed" class="w-full mt-1 p-2 border rounded-md bg-gray-50 outline-none focus:ring-2  focus:ring-blue-400">
+      </div>
+      
+      <div class="flex items-center justify-between pt-4">
+        <a href="order.html" class="text-gray-500 hover:text-gray-700 text-sm underline">Back to Orders</a>
+       <button class="bg-green-600 text-white px-6 py-2 rounded-md font-bold shadow-md hover:bg-green-700">Save Changes</button>
+      </div>
+    </div>
+  </div>
+    <!-- Order-7------> 
+
+   <div id="order08" class="user-form-container w-full max-w-md bg-white p-8 rounded-xl shadow-lg">
+    <h2 class="text-2xl font-bold mb-6 text-gray-800">Edit Order: Arayan kour	</h2>
+    <div class="space-y-4">
+      <div>
+        <label class="block text-sm font-semibold text-gray-600">Full Name</label>
+        <input type="text" value="Arayan Kour" class="w-full mt-1 p-2 border rounded-md bg-gray-50 outline-none focus:ring-2  focus:ring-blue-400">
+      </div>
+      <div>
+        <label class="block text-sm font-semibold text-gray-600">Order ID</label>
+        <input type="text" value="#1352" class="w-full mt-1 p-2 border rounded-md bg-gray-50 outline-none focus:ring-2  focus:ring-blue-400">
+      </div>
+       <div>
+        <label class="block text-sm font-semibold text-gray-600">Total Amount</label>
+        <input type="text" value="₹99,500" class="w-full mt-1 p-2 border rounded-md bg-gray-50 outline-none focus:ring-2  focus:ring-blue-400">
+      </div>
+       <div>
+        <label class="block text-sm font-semibold text-gray-600">Order Status</label>
+        <input type="text" value="InCompleted" class="w-full mt-1 p-2 border rounded-md bg-gray-50 outline-none focus:ring-2  focus:ring-blue-400">
+      </div>
+      
+      <div class="flex items-center justify-between pt-4">
+        <a href="order.html" class="text-gray-500 hover:text-gray-700 text-sm underline">Back to Orders</a>
+       <button class="bg-green-600 text-white px-6 py-2 rounded-md font-bold shadow-md hover:bg-green-700">Save Changes</button>
+      </div>
+    </div>
+  </div>
+  <!-- View-1 -->
+   <div id="View01" class="user-form-container w-full max-w-md bg-gray-900 p-8 rounded-xl shadow-lg">
+    <h2 class="text-2xl font-bold  mb-6 text-gray-300">View: Piyush Sharma</h2>
+    <div class="space-y-4">
+      <div>
+        <label class="block text-sm font-semibold text-gray-500">Full Name: Piyush Sharma</label>
+      </div>
+      <div>
+        <label class="block text-sm font-semibold text-gray-500">Order ID: #0245</label>
+      </div>
+       <div>
+        <label class="block text-sm font-semibold text-gray-500">Total Amount: ₹13,500</label>
+      </div>
+       <div>
+        <label class="block text-sm font-semibold text-gray-500">Order Status: Completed</label>
+      </div>
+      
+      <div class="flex items-center justify-between pt-4">
+        <a href="order.html" class="text-gray-500 hover:text-gray-700 text-sm underline">Back to Orders</a>
+        <button class="bg-red-600 text-white px-4 py-2 rounded-md font-bold shadow-md cursor-pointer hover:bg-red-700">View More</button>
+      </div>
+    </div>
+  </div>
+    <!-- View-2 -->
+  <div id="View02" class="user-form-container w-full max-w-md bg-gray-900 p-8 rounded-xl shadow-lg">
+    <h2 class="text-2xl font-bold  mb-6 text-gray-300">View: Het pandit</h2>
+    <div class="space-y-4">
+      <div>
+        <label class="block text-sm font-semibold text-gray-500">Full Name: Het pandit</label>
+      </div>
+      <div>
+        <label class="block text-sm font-semibold text-gray-500">Order ID: #1342</label>
+      </div>
+       <div>
+        <label class="block text-sm font-semibold text-gray-500">Total Amount: ₹11,000</label>
+      </div>
+       <div>
+        <label class="block text-sm font-semibold text-gray-500">Order Status: Pending</label>
+      </div>
+      
+      <div class="flex items-center justify-between pt-4">
+        <a href="order.html" class="text-gray-500 hover:text-gray-700 text-sm underline">Back to Orders</a>
+        <button class="bg-red-600 text-white px-4 py-2 rounded-md font-bold shadow-md cursor-pointer hover:bg-red-700">View More</button>
+      </div>
+    </div>
+  </div>
+   <!-- View-3 -->
+  <div id="View03" class="user-form-container w-full max-w-md bg-gray-900 p-8 rounded-xl shadow-lg">
+    <h2 class="text-2xl font-bold  mb-6 text-gray-300">View: Neel Gohil</h2>
+    <div class="space-y-4">
+      <div>
+        <label class="block text-sm font-semibold text-gray-500">Full Name: Neel Gohil</label>
+      </div>
+      <div>
+        <label class="block text-sm font-semibold text-gray-500">Order ID: #1342</label>
+      </div>
+       <div>
+        <label class="block text-sm font-semibold text-gray-500">Total Amount: ₹18,000</label>
+      </div>
+       <div>
+        <label class="block text-sm font-semibold text-gray-500">Order Status: InCompleted</label>
+      </div>
+      
+      <div class="flex items-center justify-between pt-4">
+        <a href="order.html" class="text-gray-500 hover:text-gray-700 text-sm underline">Back to Orders</a>
+        <button class="bg-red-600 text-white px-4 py-2 rounded-md font-bold shadow-md cursor-pointer hover:bg-red-700">View More</button>
+      </div>
+    </div>
+  </div>
+  <!-- View-4 -->
+  <div id="View04" class="user-form-container w-full max-w-md bg-gray-900 p-8 rounded-xl shadow-lg">
+    <h2 class="text-2xl font-bold  mb-6 text-gray-300">View: Shlock roy</h2>
+    <div class="space-y-4">
+      <div>
+        <label class="block text-sm font-semibold text-gray-500">Full Name: Shlock roy</label>
+      </div>
+      <div>
+        <label class="block text-sm font-semibold text-gray-500">Order ID: #1866</label>
+      </div>
+       <div>
+        <label class="block text-sm font-semibold text-gray-500">Total Amount: ₹18,000</label>
+      </div>
+       <div>
+        <label class="block text-sm font-semibold text-gray-500">Order Status: Completed</label>
+      </div>
+      
+      <div class="flex items-center justify-between pt-4">
+        <a href="order.html" class="text-gray-500 hover:text-gray-700 text-sm underline">Back to Orders</a>
+        <button class="bg-red-600 text-white px-4 py-2 rounded-md font-bold shadow-md cursor-pointer hover:bg-red-700">View More</button>
+      </div>
+    </div>
+  </div>
+   <!-- View-5 -->
+  <div id="View05" class="user-form-container w-full max-w-md bg-gray-900 p-8 rounded-xl shadow-lg">
+    <h2 class="text-2xl font-bold  mb-6 text-gray-300">View: Niraj Mahinedra</h2>
+    <div class="space-y-4">
+      <div>
+        <label class="block text-sm font-semibold text-gray-500">Full Name: Niraj Mahinedra</label>
+      </div>
+      <div>
+        <label class="block text-sm font-semibold text-gray-500">Order ID: #1245</label>
+      </div>
+       <div>
+        <label class="block text-sm font-semibold text-gray-500">Total Amount: ₹19,500</label>
+      </div>
+       <div>
+        <label class="block text-sm font-semibold text-gray-500">Order Status: Pending</label>
+      </div>
+      
+      <div class="flex items-center justify-between pt-4">
+        <a href="order.html" class="text-gray-500 hover:text-gray-700 text-sm underline">Back to Orders</a>
+        <button class="bg-red-600 text-white px-4 py-2 rounded-md font-bold shadow-md cursor-pointer hover:bg-red-700">View More</button>
+      </div>
+    </div>
+  </div>
+   <!-- View-6 -->
+  <div id="View06" class="user-form-container w-full max-w-md bg-gray-900 p-8 rounded-xl shadow-lg">
+    <h2 class="text-2xl font-bold  mb-6 text-gray-300">View: Karthik Aryan</h2>
+    <div class="space-y-4">
+      <div>
+        <label class="block text-sm font-semibold text-gray-500">Full Name: Karthik Aryan</label>
+      </div>
+      <div>
+        <label class="block text-sm font-semibold text-gray-500">Order ID: #1245</label>
+      </div>
+       <div>
+        <label class="block text-sm font-semibold text-gray-500">Total Amount: ₹20,500</label>
+      </div>
+       <div>
+        <label class="block text-sm font-semibold text-gray-500">Order Status: InCompleted</label>
+      </div>
+      
+      <div class="flex items-center justify-between pt-4">
+        <a href="order.html" class="text-gray-500 hover:text-gray-700 text-sm underline">Back to Orders</a>
+        <button class="bg-red-600 text-white px-4 py-2 rounded-md font-bold shadow-md cursor-pointer hover:bg-red-700">View More</button>
+      </div>
+    </div>
+  </div>
+   <!-- View-7 -->
+  <div id="View07" class="user-form-container w-full max-w-md bg-gray-900 p-8 rounded-xl shadow-lg">
+    <h2 class="text-2xl font-bold  mb-6 text-gray-300">View: Karthik Sharma</h2>
+    <div class="space-y-4">
+      <div>
+        <label class="block text-sm font-semibold text-gray-500">Full Name: Karthik Sharma</label>
+      </div>
+      <div>
+        <label class="block text-sm font-semibold text-gray-500">Order ID: #1867</label>
+      </div>
+       <div>
+        <label class="block text-sm font-semibold text-gray-500">Total Amount: ₹73,500</label>
+      </div>
+       <div>
+        <label class="block text-sm font-semibold text-gray-500">Order Status: Completed</label>
+      </div>
+      
+      <div class="flex items-center justify-between pt-4">
+        <a href="order.html" class="text-gray-500 hover:text-gray-700 text-sm underline">Back to Orders</a>
+        <button class="bg-red-600 text-white px-4 py-2 rounded-md font-bold shadow-md cursor-pointer hover:bg-red-700">View More</button>
+      </div>
+    </div>
+  </div>
+    <!-- View-8 -->
+  <div id="View08" class="user-form-container w-full max-w-md bg-gray-900 p-8 rounded-xl shadow-lg">
+    <h2 class="text-2xl font-bold  mb-6 text-gray-300">View: Arayan kour</h2>
+    <div class="space-y-4">
+      <div>
+        <label class="block text-sm font-semibold text-gray-500">Full Name: Arayan kour</label>
+      </div>
+      <div>
+        <label class="block text-sm font-semibold text-gray-500">Order ID: #1352</label>
+      </div>
+       <div>
+        <label class="block text-sm font-semibold text-gray-500">Total Amount: ₹99,500</label>
+      </div>
+       <div>
+        <label class="block text-sm font-semibold text-gray-500">Order Status: InCompleted</label>
+      </div>
+      
+      <div class="flex items-center justify-between pt-4">
+        <a href="order.html" class="text-gray-500 hover:text-gray-700 text-sm underline">Back to Orders</a>
+        <button class="bg-red-600 text-white px-4 py-2 rounded-md font-bold shadow-md cursor-pointer hover:bg-red-700">View More</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
