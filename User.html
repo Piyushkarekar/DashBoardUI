@@ -1,164 +1,167 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admin Dashboard</title>
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link href="src/output.css" rel="stylesheet" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard</title>
 
-  <body class="bg-gray-100">
-    <div class="flex min-h-screen">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="src/output.css" rel="stylesheet" />
+</head>
 
-         <!-- Sidebar -->
-       <input type="checkbox" id="sidebar-toggle" class="hidden peer">
-<!-- Sidebar -->
+<body class="bg-gray-100">
+
+<div class="flex">
+
+<!-- ✅ ONLY ONE CHECKBOX -->
+<input type="checkbox" id="sidebar-toggle" class="hidden peer">
+
+<!-- ================= SIDEBAR ================= -->
 <aside class="fixed top-0 left-0 h-screen w-72 bg-gray-900 text-white
-              transition-all duration-300
-              peer-checked:w-20 overflow-hidden">
+              -translate-x-full
+              peer-checked:translate-x-0
+              transition-transform duration-300
+              md:translate-x-0
+              md:peer-checked:w-20
+              overflow-hidden z-40">
 
-  <!-- Header -->
   <div class="p-6 border-b flex items-center justify-between border-gray-700">
-
-    <!-- Title -->
-    <h2 class="text-2xl font-bold whitespace-nowrap overflow-hidden
-               transition-all duration-300
-               peer-checked:opacity-0 peer-checked:w-0">
-      Dashboard UI
+    <h2 class="text-xl font-bold whitespace-nowrap overflow-hidden transition-all duration-300 
+              md:peer-checked:opacity-0 md:peer-checked:w-0">
+      Orders
     </h2>
 
-    <!-- Toggle Button -->
-    <label for="sidebar-toggle"
-      class="px-3 py-2 bg-amber-300 rounded-full cursor-pointer shrink-0">
-
-      <i class="fa-solid fa-bars text-white"></i>
-
+        <label for="sidebar-toggle" class="cursor-pointer">
+      <div class="md:hidden text-gray-400 hover:text-white p-2">
+        <i class="fa-solid fa-xmark text-2xl"></i>
+      </div>
+    <!-- Desktop Collapse Button -->
+    <label for="sidebar-toggle" 
+      class="hidden md:block px-3 py-2 bg-amber-400 rounded-lg cursor-pointer hover:bg-amber-500 transition-colors">
+      <i class="fa-solid fa-bars text-gray-900"></i>
     </label>
-
   </div>
 
-  <!-- Nav -->
-  <nav class="space-y-3 p-4">
+  <nav class="flex-1 p-4 space-y-2">
 
-    <!-- Dashboard -->
     <a href="index.html"
-      class="flex items-center gap-3 p-3 rounded hover:bg-gray-200 hover:text-black transition">
-
-      <i class="fa-solid fa-gauge text-lg w-6 text-center"></i>
-
-      <span class="whitespace-nowrap overflow-hidden
-                   transition-all duration-300
-                   peer-checked:opacity-0 peer-checked:w-0">
+      class="flex items-center gap-4 p-3 rounded-lg hover:bg-gray-800 transition">
+      <i class="fa-solid fa-gauge w-6 text-amber-400"></i>
+      <span class="whitespace-nowrap overflow-hidden transition-all duration-300
+                   md:peer-checked:opacity-0 md:peer-checked:w-0">
         Dashboard
       </span>
-
     </a>
 
-    <!-- Orders -->
     <a href="order.html"
-      class="flex items-center gap-3 p-3 rounded hover:bg-gray-200 hover:text-black transition">
-
-      <i class="fa-solid fa-cart-shopping text-lg w-6 text-center"></i>
-
-      <span class="whitespace-nowrap overflow-hidden
-                   transition-all duration-300
-                   peer-checked:opacity-0 peer-checked:w-0">
+      class="flex items-center gap-4 p-3 rounded-lg hover:bg-gray-800 transition">
+      <i class="fa-solid fa-cart-shopping w-6 text-amber-400"></i>
+      <span class="whitespace-nowrap overflow-hidden transition-all duration-300
+                   md:peer-checked:opacity-0 md:peer-checked:w-0">
         Orders
       </span>
-
     </a>
 
-    <!-- Users -->
     <a href="User.html"
-      class="flex items-center gap-3 p-3 rounded hover:bg-gray-200 hover:text-black transition">
-
-      <i class="fa-solid fa-users text-lg w-6 text-center"></i>
-
-      <span class="whitespace-nowrap overflow-hidden
-                   transition-all duration-300
-                   peer-checked:opacity-0 peer-checked:w-0">
-        User Management
+      class="flex items-center gap-4 p-3 rounded-lg hover:bg-gray-800 transition">
+      <i class="fa-solid fa-users w-6 text-amber-400"></i>
+      <span class="whitespace-nowrap overflow-hidden transition-all duration-300
+                   md:peer-checked:opacity-0 md:peer-checked:w-0">
+        Users
       </span>
-
     </a>
 
   </nav>
-
 </aside>
 
-      <!-- Main Content -->
-     <div class="flex-1 ml-72 peer-checked:ml-20 transition-all duration-300 bg-gray-200 min-h-screen">
-        <!-- Top Bar -->
-      <div class="flex justify-between items-center h-16 bg-white border-b border-gray-200 text-gray-800 px-4">
+<!-- ================= TOP BAR ================= -->
+<div class="fixed top-0 right-0 h-16 bg-white border-b border-gray-200
+            flex justify-between items-center px-6 z-30
+            transition-all duration-300
+            left-0
+            md:left-72
+            md:peer-checked:left-20">
 
-  <h2 class="text-xl font-semibold">Admin Panel</h2>
+  <div class="flex items-center gap-3">
+
+    <!--  Hamburger -->
+    <label for="sidebar-toggle" class="md:hidden cursor-pointer">
+      <i class="fa-solid fa-bars text-xl"></i>
+    </label>
+
+    <h2 class="text-xl font-semibold">Admin Panel</h2>
+  </div>
 
   <div class="flex items-center gap-3">
     <p class="font-medium">Admin</p>
-
-    <div class="w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold">
+    <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold">
       A
     </div>
   </div>
-
 </div>
+
+<!-- ================= CONTENT ================= -->
+<div class="flex-1 ml-0 md:ml-72 md:peer-checked:ml-20 transition-all duration-300
+            pt-16 pb-20 bg-gray-200 min-h-screen w-full">
+
+<div class="p-2">
+<div class="bg-white shadow-lg rounded-xl overflow-hidden">
+
+<div class="flex justify-between items-center p-6">
+  <h2 class="md:text-xl font-semibold text-base">Users Management</h2>
+  <button
+  class="bg-blue-600 text-white px-3 py-2 md:px-4 md:py-2 rounded-lg hover:bg-blue-700 transition cursor-pointer"
+  onclick="window.location.href='addOrder.html'">
+  
+  <span class="md:hidden">+</span>
+  <span class="hidden md:inline">+ Order</span>
+
+</button>
+</div>
+
+ <!-- Scroll Wrapper -->
+  <div class="overflow-x-auto">
+
+    <!-- Table Header -->
+    <div class="min-w-[900px] bg-gray-100 rounded-t-lg grid grid-cols-6 text-xs md:text-sm font-semibold text-gray-600 px-6 py-3">
+      <div>ID</div>
+      <div>Name</div>
+      <div>Email</div>
+      <div>Status</div>
+      <div>Created</div>
+      <div>Actions</div>
+    </div>
+
+    <!-- Orders List -->
+    <div class="min-w-[900px] bg-white divide-y text-xs md:text-sm">
+
+      <!-- 1 -->
+      <div class="grid grid-cols-6 px-6 py-4 hover:bg-gray-50 items-center">
+        <div>1</div>
+        <div>Piyush</div>
+        <div class="text-blue-500 underline cursor-pointer">piyush@gmail.com</div>
        
-        <!-- Card -->
-        <div class="m-5 bg-white shadow-lg rounded-xl overflow-hidden">
-          <!-- Card Header -->
-          <div class="flex justify-between items-center p-6 ">
-            <h2 class="text-lg sm:text-2xl font-semibold">User Management</h2>
-
-            <button
-              class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
-              onclick="window.location.href = 'form.html'"
-            >
-              + Add User
-            </button>
-          </div>
-
-          <!-- Table -->
-          <div class="overflow-x-auto">
-            <table class="w-full text-left">
-              <thead class="bg-gray-100 text-gray-600 text-sm uppercase">
-                <tr>
-                  <th class="px-6 py-4">ID</th>
-                  <th class="px-6 py-4">Name</th>
-                  <th class="px-6 py-4">Email</th>
-                  <th class="px-6 py-4">Status</th>
-                  <th class="px-6 py-4">Created</th>
-                  <th class="px-6 py-4">Actions</th>
-                </tr>
-              </thead>
-
-              <tbody class="text-gray-700 text-sm">
-                <!-- 1 -->
-                <tr class="border-b hover:bg-gray-50">
-                  <td class="px-6 py-4">1</td>
-                  <td class="px-6 py-4 font-medium">Piyush</td>
-                  <td class="px-6 py-4">piyush@gmail.com</td>
-                  <td class="px-6 py-4">
-                    <span
-                      class="bg-green-100 text-green-600 inline-block  w-20 h-5 text-center rounded-full text-xs"
-                      >Active</span
-                    >
-                  </td>
-                  <td class="px-6 py-4">19 Feb 2026</td>
-                  <td class="px-6 py-4 space-x-2">
-                    <button
-                      class="text-blue-600 cursor-pointer hover:underline"
-                      onclick="window.location.href = 'edit.html#user1'"
-                    >
-                      Edit
-                    </button>
-                    <input
-                      type="checkbox"
+        <div>
+          <span class="bg-green-100 text-green-600 flex items-center justify-center w-20 h-7 rounded-full text-xs">
+            Active
+          </span>
+        </div>
+         <div>19 Feb 2026</div>
+        <div class="space-x-2">
+           <button
+                        class="text-blue-600 cursor-pointer hover:underline"
+                        onclick="window.location.href = 'edit.html#user1'"
+                      >
+                        Edit
+                      </button>
+        <input 
                       id="delete-toggle"
+                      type="checkbox"
                       class="hidden peer"/>
-                   <label
+                    <label
                       for="delete-toggle"
-                      class=" text-red-600 rounded-lg hover:underline cursor-pointer">
+                      class=" text-red-600 hover:underline  rounded-lg cursor-pointer">
                       Delete
                     </label>
                     <!-- Overlay -->
@@ -193,229 +196,248 @@
                         </div>
                       </div>
                     </div>
-                  </td>
-                </tr>
-
-                <!-- 2 -->
-                <tr class="border-b hover:bg-gray-50">
-                  <td class="px-6 py-4">2</td>
-                  <td class="px-6 py-4 font-medium">Rahul</td>
-                  <td class="px-6 py-4">rahul@gmail.com</td>
-                  <td class="px-6 py-4">
-                    <span
-                      class="bg-red-100 text-red-600 inline-block  w-20 h-5 text-center rounded-full text-xs"
-                      >InActive</span
-                    >
-                  </td>
-                  <td class="px-6 py-4">19 Feb 2026</td>
-                  <td class="px-6 py-4 space-x-2">
-                    <button
-                      class="text-blue-600 cursor-pointer hover:underline"
-                      onclick="window.location.href = 'edit.html#user2'"
-                    >
-                      Edit
-                    </button>
-                    <input 
-                    type="checkbox"
-                     id="delete-toggle" 
-                    class="hidden peer"/>
-                    <label
-                      for="delete-toggle"
-                      class=" text-red-600 hover:underline  rounded-lg cursor-pointer">
-                      Delete
-                    </label>
-                  </td>
-                </tr>
-
-                <!-- 3 -->
-                <tr class="border-b hover:bg-gray-50">
-                  <td class="px-6 py-4">3</td>
-                  <td class="px-6 py-4 font-medium">Parth</td>
-                  <td class="px-6 py-4">parth@gmail.com</td>
-                  <td class="px-6 py-4">
-                    <span
-                      class="bg-green-100 text-green-600 inline-block  w-20 h-5 text-center rounded-full text-xs"
-                      >Active</span
-                    >
-                  </td>
-                  <td class="px-6 py-4">05 Jan 2026</td>
-                  <td class="px-6 py-4 space-x-2">
-                    <button
-                      class="text-blue-600 cursor-pointer hover:underline"
-                      onclick="window.location.href = 'edit.html#user3'"
-                    >
-                      Edit
-                    </button>
-                      <input 
-                      id="delete-toggle"
-                      type="checkbox"
-                      class="hidden peer"/>
-                    <label
-                      for="delete-toggle"
-                      class=" text-red-600 hover:underline  rounded-lg cursor-pointer">
-                      Delete
-                    </label>
-                  </td>
-                </tr>
-
-                <!-- 4 -->
-                <tr class="border-b hover:bg-gray-50">
-                  <td class="px-6 py-4">4</td>
-                  <td class="px-6 py-4 font-medium">Sneha</td>
-                  <td class="px-6 py-4">sneha@gmail.com</td>
-                  <td class="px-6 py-4">
-                    <span
-                      class="bg-red-100 text-red-600 inline-block  w-20 h-5 text-center  rounded-full text-xs"
-                      >InActive</span
-                    >
-                  </td>
-                  <td class="px-6 py-4">23 Dec 2025</td>
-                  <td class="px-6 py-4 space-x-2">
-                    <button
-                      class="text-blue-600 cursor-pointer hover:underline"
-                      onclick="window.location.href = 'edit.html#user4'"
-                    >
-                      Edit
-                    </button>
-                   <input 
-                      id="delete-toggle"
-                      type="checkbox"
-                      class="hidden peer"/>
-                    <label
-                      for="delete-toggle"
-                      class=" text-red-600 hover:underline  rounded-lg cursor-pointer">
-                      Delete
-                    </label>
-                  </td>
-                </tr>
-
-                <!-- 5 -->
-                <tr class="border-b hover:bg-gray-50">
-                  <td class="px-6 py-4">5</td>
-                  <td class="px-6 py-4 font-medium">Yash</td>
-                  <td class="px-6 py-4">yash@gmail.com</td>
-                  <td class="px-6 py-4">
-                    <span
-                      class="bg-green-100 text-green-600 inline-block  w-20 h-5 text-center rounded-full text-xs"
-                      >Active</span
-                    >
-                  </td>
-                  <td class="px-6 py-4">17 Nov 2025</td>
-                  <td class="px-6 py-4 space-x-2">
-                    <button
-                      class="text-blue-600 cursor-pointer hover:underline"
-                      onclick="window.location.href = 'edit.html#user5'"
-                    >
-                      Edit
-                    </button>
-                    <input 
-                      id="delete-toggle"
-                      type="checkbox"
-                      class="hidden peer"/>
-                    <label
-                      for="delete-toggle"
-                      class=" text-red-600 hover:underline  rounded-lg cursor-pointer">
-                      Delete
-                    </label>
-                  </td>
-                </tr>
-
-                <!-- 6 -->
-                <tr class="border-b hover:bg-gray-50">
-                  <td class="px-6 py-4">6</td>
-                  <td class="px-6 py-4 font-medium">Aarav</td>
-                  <td class="px-6 py-4">aarav@gmail.com</td>
-                  <td class="px-6 py-4">
-                    <span
-                      class="bg-green-100 text-green-600 inline-block  w-20 h-5 text-center rounded-full text-xs"
-                      >Active</span
-                    >
-                  </td>
-                  <td class="px-6 py-4">02 Oct 2025</td>
-                  <td class="px-6 py-4 space-x-2">
-                    <button
-                      class="text-blue-600 cursor-pointer hover:underline"
-                      onclick="window.location.href = 'edit.html#user6'"
-                    >
-                      Edit
-                    </button>
-                   <input 
-                      id="delete-toggle"
-                      type="checkbox"
-                      class="hidden peer"/>
-                    <label
-                      for="delete-toggle"
-                      class=" text-red-600 hover:underline  rounded-lg cursor-pointer">
-                      Delete
-                    </label>
-                  </td>
-                </tr>
-
-                <!-- 7 -->
-                <tr class="border-b hover:bg-gray-50">
-                  <td class="px-6 py-4">7</td>
-                  <td class="px-6 py-4 font-medium">Meera</td>
-                  <td class="px-6 py-4">meera@gmail.com</td>
-                  <td class="px-6 py-4">
-                    <span
-                      class="bg-green-100 text-green-600 inline-block  w-20 h-5 text-center rounded-full text-xs"
-                      >Active</span
-                    >
-                  </td>
-                  <td class="px-6 py-4">15 Sep 2025</td>
-                  <td class="px-6 py-4 space-x-2">
-                    <button
-                      class="text-blue-600 cursor-pointer hover:underline"
-                      onclick="window.location.href = 'edit.html#user7'"
-                    >
-                      Edit
-                    </button><input 
-                      id="delete-toggle"
-                      type="checkbox"
-                      class="hidden peer"/>
-                    <label
-                      for="delete-toggle"
-                      class=" text-red-600 hover:underline  rounded-lg cursor-pointer">
-                      Delete
-                    </label>
-                  </td>
-                </tr>
-
-                <!-- 8 -->
-                <tr class="hover:bg-gray-50">
-                  <td class="px-6 py-4">8</td>
-                  <td class="px-6 py-4 font-medium">Rohan</td>
-                  <td class="px-6 py-4">rohan@gmail.com</td>
-                  <td class="px-6 py-4">
-                    <span
-                      class="bg-red-100 text-red-600 inline-block  w-20 h-5 text-center rounded-full text-xs"
-                      >InActive</span
-                    >
-                  </td>
-                  <td class="px-6 py-4">28 Aug 2025</td>
-                  <td class="px-6 py-4 space-x-2">
-                    <button
-                      class="text-blue-600 cursor-pointer hover:underline"
-                      onclick="window.location.href = 'edit.html#user8'"
-                    >
-                      Edit
-                    </button>
-                   <input 
-                      id="delete-toggle"
-                      type="checkbox"
-                      class="hidden peer"/>
-                    <label
-                      for="delete-toggle"
-                      class=" text-red-600 hover:underline  rounded-lg cursor-pointer">
-                      Delete
-                    </label>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
         </div>
       </div>
+
+      <!-- 2 -->
+      <div class="grid grid-cols-6 px-6 py-4 hover:bg-gray-50 items-center">
+        <div>2</div>
+        <div>Rahul</div>
+        <div class="text-blue-500 underline cursor-pointer">rahul@gmail.com</div>
+        <div>
+          <span class="bg-red-100 text-red-600 flex items-center justify-center w-20 h-7 rounded-full text-xs">
+           InActive
+          </span>
+        </div>
+      <div>12 Jan 2026</div>
+        <div class="space-x-2">
+          <button
+                        class="text-blue-600 cursor-pointer hover:underline"
+                        onclick="window.location.href = 'edit.html#user2'"
+                      >
+                        Edit
+                      </button>
+                      <input
+                        type="checkbox"
+                        id="delete-toggle"
+                        class="hidden peer"
+                      />
+                      <label
+                        for="delete-toggle"
+                        class="text-red-600 hover:underline rounded-lg cursor-pointer"
+                      >
+                        Delete
+                      </label>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="grid grid-cols-6 px-6 py-4 hover:bg-gray-50 items-center">
+        <div>3</div>
+        <div>Parth</div>
+       <div class="text-blue-500 underline cursor-pointer">parth@gmail.com</div>
+     
+       <div>
+          <span class="bg-green-100 text-green-600 flex items-center justify-center w-20 h-7 rounded-full text-xs">
+            Active
+          </span>
+        </div>
+        <div>05 Jan 2026</div>
+        <div class="space-x-2">
+          <button
+                        class="text-blue-600 cursor-pointer hover:underline"
+                        onclick="window.location.href = 'edit.html#user2'"
+                      >
+                        Edit
+                      </button>
+                      <input
+                        type="checkbox"
+                        id="delete-toggle"
+                        class="hidden peer"
+                      />
+                      <label
+                        for="delete-toggle"
+                        class="text-red-600 hover:underline rounded-lg cursor-pointer"
+                      >
+                        Delete
+                      </label>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="grid grid-cols-6 px-6 py-4 hover:bg-gray-50 items-center">
+        <div>4</div>
+        <div>Sneha</div>
+ <div class="text-blue-500 underline cursor-pointer">sneha@gmail.com</div>
+        
+           <div>
+          <span class="bg-red-100 text-red-600 flex items-center justify-center w-20 h-7 rounded-full text-xs">
+           InActive
+          </span>
+        </div>
+        <div>23 Dec 20256</div>
+        <div class="space-x-2">
+         <button
+                        class="text-blue-600 cursor-pointer hover:underline"
+                        onclick="window.location.href = 'edit.html#user2'"
+                      >
+                        Edit
+                      </button>
+                      <input
+                        type="checkbox"
+                        id="delete-toggle"
+                        class="hidden peer"
+                      />
+                      <label
+                        for="delete-toggle"
+                        class="text-red-600 hover:underline rounded-lg cursor-pointer"
+                      >
+                        Delete
+                      </label>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="grid grid-cols-6 px-6 py-4 hover:bg-gray-50 items-center">
+        <div>5</div>
+        <div>Yash</div>
+      <div class="text-blue-500 underline cursor-pointer">Yash@gmail.com</div>
+        
+        <div>
+          <span class="bg-green-100 text-green-600 flex items-center justify-center w-20 h-7 rounded-full text-xs">
+            Active
+          </span>
+        </div>
+        <div>17 Nov 2025</div>
+        <div class="space-x-2">
+          <button
+                        class="text-blue-600 cursor-pointer hover:underline"
+                        onclick="window.location.href = 'edit.html#user2'"
+                      >
+                        Edit
+                      </button>
+                      <input
+                        type="checkbox"
+                        id="delete-toggle"
+                        class="hidden peer"
+                      />
+                      <label
+                        for="delete-toggle"
+                        class="text-red-600 hover:underline rounded-lg cursor-pointer"
+                      >
+                        Delete
+                      </label>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="grid grid-cols-6 px-6 py-4 hover:bg-gray-50 items-center">
+        <div>6</div>
+        <div>Aarav</div>
+       <div class="text-blue-500 underline cursor-pointer">Aarav@gmail.com</div>
+          <div>
+          <span class="bg-red-100 text-red-600 flex items-center justify-center w-20 h-7 rounded-full text-xs">
+           InActive
+          </span>
+        </div>
+        <div>29 Jun 2026</div>
+        <div class="space-x-2">
+         <button
+                        class="text-blue-600 cursor-pointer hover:underline"
+                        onclick="window.location.href = 'edit.html#user2'"
+                      >
+                        Edit
+                      </button>
+                      <input
+                        type="checkbox"
+                        id="delete-toggle"
+                        class="hidden peer"
+                      />
+                      <label
+                        for="delete-toggle"
+                        class="text-red-600 hover:underline rounded-lg cursor-pointer"
+                      >
+                        Delete
+                      </label>
+        </div>
+      </div>
+
+      <!-- 7 -->
+      <div class="grid grid-cols-6 px-6 py-4 hover:bg-gray-50 items-center">
+        <div>7</div>
+        <div>Meera</div>
+       <div class="text-blue-500 underline cursor-pointer">Meera@gmail.com</div>
+        
+        <div>
+          <span class="bg-green-100 text-green-600 flex items-center justify-center w-20 h-7 rounded-full text-xs">
+            Active
+          </span>
+        </div>
+        <div>18 Feb 2026</div>
+        <div class="space-x-2">
+         <button
+                        class="text-blue-600 cursor-pointer hover:underline"
+                        onclick="window.location.href = 'edit.html#user2'"
+                      >
+                        Edit
+                      </button>
+                      <input
+                        type="checkbox"
+                        id="delete-toggle"
+                        class="hidden peer"
+                      />
+                      <label
+                        for="delete-toggle"
+                        class="text-red-600 hover:underline rounded-lg cursor-pointer"
+                      >
+                        Delete
+                      </label>
+        </div>
+      </div>
+
+      <!-- 8 -->
+      <div class="grid grid-cols-6 px-6 py-4 hover:bg-gray-50 items-center">
+        <div>8</div>
+        <div>Rohan</div>
+      <div class="text-blue-500 underline cursor-pointer">Rohan@gmail.com</div>
+     
+    
+           <div>
+          <span class="bg-red-100 text-red-600 flex items-center justify-center w-20 h-7 rounded-full text-xs">
+           InActive
+          </span>
+        </div>
+           <div>31 Dec 2026</div>
+        <div class="space-x-2">
+         <button
+                        class="text-blue-600 cursor-pointer hover:underline"
+                        onclick="window.location.href = 'edit.html#user2'"
+                      >
+                        Edit
+                      </button>
+                      <input
+                        type="checkbox"
+                        id="delete-toggle"
+                        class="hidden peer"
+                      />
+                      <label
+                        for="delete-toggle"
+                        class="text-red-600 hover:underline rounded-lg cursor-pointer"
+                      >
+                        Delete
+                      </label>
+        </div>
+      </div>
+
     </div>
-  </body>
+  </div>
+</div>
+
+</div>
+</div>
+</div>
+
+</div>
+
+</body>
 </html>
